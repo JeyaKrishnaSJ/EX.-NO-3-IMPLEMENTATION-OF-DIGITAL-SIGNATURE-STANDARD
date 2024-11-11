@@ -20,7 +20,7 @@ standard (Euclidean Algorithm).
 
 ## PROGRAM:
 ```
-#include <stdio.h>
+#include <stdio.h> 
 
 
 int euclid(int m, int n) {
