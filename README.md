@@ -22,7 +22,7 @@ standard (Euclidean Algorithm).
 ```
 #include <stdio.h>
 
-// Function to calculate GCD using Euclid's algorithm
+
 int euclid(int m, int n) {
     if (n == 0) {
         return m;
@@ -31,7 +31,7 @@ int euclid(int m, int n) {
     }
 }
 
-// Extended Euclidean Algorithm
+
 void exteuclid(int a, int b, int *gcd, int *x) {
     int r1 = a, r2 = b;
     int s1 = 1, s2 = 0;
@@ -53,13 +53,13 @@ void exteuclid(int a, int b, int *gcd, int *x) {
     }
 
     *gcd = r1;
-    *x = (t1 < 0) ? (t1 + a) : t1; // Ensure x is non-negative
+    *x = (t1 < 0) ? (t1 + a) : t1; 
 }
 
 int mod_pow(long long base, long long exp, long long mod) {
     long long result = 1;
     while (exp > 0) {
-        if (exp % 2 == 1) { // If exp is odd
+        if (exp % 2 == 1) { 
             result = (result * base) % mod;
         }
         base = (base * base) % mod;
@@ -73,7 +73,9 @@ int main() {
     int q = 953;
     int n = p * q;
     int Pn = (p - 1) * (q - 1);
-    int e = 313; // Encryption key
+
+   
+    int e = 313; 
     int d;
     int gcd;
 
@@ -83,16 +85,18 @@ int main() {
         printf("Decryption key is: %d\n", d);
     } else {
         printf("Multiplicative inverse for the given encryption key does not exist. Choose a different encryption key.\n");
-        return 1; // Exit if no valid decryption key
+        return 1; 
     }
 
-
+   
     int M = 19070;
 
-    long long S = mod_pow(M, d, n); // S = M^d mod n
+   
+    long long S = mod_pow(M, d, n); 
 
-    long long M1 = mod_pow(S, e, n); // M1 = S^e mod n
+    long long M1 = mod_pow(S, e, n); 
 
+ 
     if (M == M1) {
         printf("As M = M1, accept the message sent by Alice.\n");
     } else {
@@ -102,8 +106,9 @@ int main() {
     return 0;
 }
 ```
+
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/eb5b5a84-e2ae-4681-b87d-3c6b459fc3a7)
+![Screenshot 2024-10-16 125236](https://github.com/user-attachments/assets/1d50b2f9-32f8-4376-8e86-c0e3c7942518)
 
 ## RESULT:
   Thus the simple Code Optimization techniques had been implemented successfully
